@@ -5,10 +5,13 @@
 
 # Goals
 
--Improve engagement
--Improve accesibility
--Improve visual design
--Help students plan their visit
+Improve engagement
+
+Improve accessibility
+
+Improve visual design
+
+Help students plan their visit
 
 # Requirements
 
@@ -17,30 +20,33 @@ Conventional Commits is used for specification to ensure clarity and consistency
 
 This approach allows each change to be easily understood, categorized (e.g., feature, fix, documentation), and traced back to a specific requirement.
 
-1. Core Functionality
+ 1. Core Functionality
+001 – Display Open Day topics and associated events from the provided JSON data
 
-001-Display Open Day topics and associated events from the provided JSON data
-002-Provide intuitive navigation through event categories or topics
-003-Support search and/or filtering 
-004-Handle missing or incomplete data (non existant image urls)
+002 – Provide intuitive navigation through event categories or topics
 
-2. User experience improvements
+003 – Support search and/or filtering
 
-005-Responsive layout for mobile, tablet, and desktop devices
-006-Improved styling and structure for event cards and topic sections
+004 – Handle missing or incomplete data (e.g. non-existent image URLs)
 
+ 2. User Experience Improvements
+005 – Responsive layout for mobile, tablet, and desktop devices
 
-3. Accesiblity
+006 – Improved styling and structure for event cards and topic sections
 
-007-Add support for dark mode using Tailwind's dark class strategy
-008-Use descriptive alt text for all images
-009-Apply high-contrast colors and accessible font sizes
+ 3. Accessibility
+007 – Add support for dark mode using Tailwind’s dark class strategy
 
-4. Visual Design
+008 – Use descriptive alt text for all images
 
-010-Use Cardiff University’s official brand colors and fonts
-011-Incorporate consistent spacing, alignment, and layout structure
-012-Ensure visual hierarchy with appropriate use of headings and typography
+009 – Apply high-contrast colors and accessible font sizes
+
+ 4. Visual Design
+010 – Use Cardiff University’s official brand colors and fonts
+
+011 – Incorporate consistent spacing, alignment, and layout structure
+
+012 – Ensure visual hierarchy with appropriate use of headings and typography
 
 ---
 
