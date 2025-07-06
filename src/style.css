@@ -24,6 +24,10 @@ h1 {
 }
 
 
+.body-container {
+  @apply max-w-7xl mx-auto grid gap-6 sm:grid-cols-2 lg:grid-cols-3 px-4 sm:px-6 lg:px-8 pt-6;
+}
+
 .title-container {
   @apply max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8 text-center;
 }

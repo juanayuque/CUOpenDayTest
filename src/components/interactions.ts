@@ -59,7 +59,8 @@ export function renderCardsAndAttachEvents() {
     : filteredTopics
 
   if (isListView && expandedId == null) {
-    container.className = "max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8"
+    container.className = "body-container"
+
 
     const allPrograms = visibleTopics.flatMap(topic =>
       topic.programs.map((prog: any) => ({
@@ -81,7 +82,8 @@ export function renderCardsAndAttachEvents() {
       })
     })
   } else {
-    container.className = "max-w-7xl mx-auto grid gap-6 sm:grid-cols-2 lg:grid-cols-3 px-4 sm:px-6 lg:px-8"
+    container.className = container.className = "body-container"
+
     container.innerHTML = renderCards(visibleTopics, expandedId)
 
     document.querySelectorAll('[data-open-id]')?.forEach(btn => {
