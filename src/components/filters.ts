@@ -80,7 +80,7 @@ export function renderFilters(topics: any[]) {
 
       <!-- Buttons -->
       <div class="col-span-2 flex items-end gap-2">
-        <button id="applyFilters" class="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 text-sm">
+        <button id="applyFilters" class="px-4 py-2 bg-cardiff-red text-cardiff-white rounded-md hover:bg-cardiff-black text-sm">
           Apply
         </button>
         <button id="clearFilters" class="icon-button" title="Clear Filters">
