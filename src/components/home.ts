@@ -30,7 +30,7 @@ export function renderHomePage(data: any, searchTerm: string, setFilteredTopics:
    <div class="title-container">
 
         <a href="https://www.cardiff.ac.uk/" target="_blank" rel="noopener noreferrer">
-          <img src="${cuLogo}" alt="Cardiff University Logo" class="h-16 w-auto" />
+          <img src="${cuLogo}" alt="Cardiff University Logo" class="h-16 w-auto mx-auto" />
         </a>
         
         <h1 class="text-4xl font-bold mb-2">Cardiff University Open Day</h1>

@@ -54,4 +54,19 @@ header.innerHTML = `
   const headerContainer = document.getElementById('header')
   headerContainer?.appendChild(header)
 
+  const html = document.documentElement
+  const toggleBtn = document.getElementById('toggleDark')!
+  const darkIcon = document.getElementById('darkIcon')!
+
+  const isSystemDark = window.matchMedia('(prefers-color-scheme: dark)').matches
+  const savedTheme = localStorage.theme ?? (isSystemDark ? 'dark' : 'light')
+  html.classList.toggle('dark', savedTheme === 'dark')
+  darkIcon.textContent = savedTheme === 'dark' ? 'light_mode' : 'dark_mode'
+
+  toggleBtn.addEventListener('click', () => {
+    const isNowDark = html.classList.toggle('dark')
+    localStorage.theme = isNowDark ? 'dark' : 'light'
+    darkIcon.textContent = isNowDark ? 'light_mode' : 'dark_mode'
+  })
+
 }
