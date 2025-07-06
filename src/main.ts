@@ -15,4 +15,7 @@ async function loadOpenDay() {
 
 loadOpenDay()
   .then(data => renderHomePage(data, '', setFilteredTopics)) // the search term starts empty
-  
+  .catch(err => {
+    document.getElementById('app')!.innerHTML = `<p class="text-red-600 p-4">Failed to load data.</p>`
+    console.error(err)
+  })
