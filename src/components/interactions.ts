@@ -1,6 +1,6 @@
 import { renderCards } from './topics'
 import { renderListView } from './list'
-import { applyFilters, clearFilters } from './filterhandlers'
+import { applyFilters, clearFilters } from './filterHandlers'
 
 let searchTerm = ''
 let isListView = false
