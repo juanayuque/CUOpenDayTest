@@ -14,6 +14,8 @@ module.exports = {
           grey: '#A7A8AA', // Cardiff University Grey
           light: '#F5F5F5', // Cardiff University Light Gray
           white: '#FFFFFF',
+          black: '#121212', // Imported from Cardiff University Websites
+          blue: '#054fa9',  // Imported from Cardiff University Websites
         },
       },
       fontFamily: {

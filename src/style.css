@@ -45,7 +45,7 @@ h1 {
 }
 
 .page-wrapper {
-  @apply bg-white dark:bg-gray-800 min-h-screen bg-cardiff-white font-sans px-2 py-6;
+  @apply min-h-screen bg-cardiff-white font-sans px-2 py-6;
 }
 
 .event-card {
@@ -101,11 +101,11 @@ h1 {
 }
 
 .btn-primary {
-  @apply px-4 py-2 bg-blue-600 text-white text-sm rounded hover:bg-blue-700;
+  @apply px-4 py-2 bg-cardiff-blue text-white text-sm rounded hover:bg-blue-700;
 }
 
 .btn-secondary {
-  @apply px-4 py-2 bg-gray-200 dark:bg-gray-700 text-sm rounded hover:bg-gray-300 dark:hover:bg-gray-600;
+  @apply px-4 py-2 bg-cardiff-grey dark:bg-gray-700 text-sm rounded hover:bg-gray-300 dark:hover:bg-gray-600;
 }
 
 .form-select {
@@ -117,31 +117,20 @@ h1 {
 }
 
 .header {
-  @apply sticky top-0 z-50 w-full bg-white/80 dark:bg-gray-800/80 backdrop-blur-md border-b border-gray-100 dark:border-gray-700;
+  @apply sticky top-0 z-50 w-full bg-cardiff-black dark:text-white dark:border-gray-700;
 }
 
 .icon-button {
   @apply p-2 text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg transition;
 }
 
+.btn {
+  @apply rounded-lg px-4 py-2 font-medium text-white bg-cardiff-blue hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cardiff-blue transition;
+}
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+
+.btn-outline {
+  @apply rounded-lg px-4 py-2 font-medium border border-cardiff-blue text-cardiff-blue bg-transparent hover:bg-cardiff-blue hover:text-white transition;
 }
 
 

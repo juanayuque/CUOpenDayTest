@@ -52,7 +52,10 @@ export function renderListView(programs: any[]) {
                       ${location}${room ? `, ${room}` : ''} ${icons}
                     </p>
                   </div>
-                  <button class="text-gray-500 hover:text-blue-600 text-xl" title="Expand Details" onclick="
+                  <button   class="ml-auto text-cardiff-blue hover:text-blue-600 hover:bg-cardiff-gray dark:hover:bg-cardiff-white text-xl rounded-full p-2"
+
+                  
+                  title="Expand Details" onclick="
                     const el = document.getElementById('details-${prog.id}');
                     if (el) el.classList.toggle('hidden');
                   ">
