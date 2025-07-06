@@ -1,6 +1,7 @@
 // Utility to fetch and display Open Day data from public/OpenDay14.json
 import './style.css'
 import { renderHomePage } from './components/home'
+import { renderHeader } from './components/header'
 import { setFilteredTopics } from './components/interactions'
 
 
@@ -12,6 +13,7 @@ async function loadOpenDay() {
   ;(window as any).openDayData = data
   return data
 }
+renderHeader() 
 
 loadOpenDay()
   .then(data => renderHomePage(data, '', setFilteredTopics)) // the search term starts empty
