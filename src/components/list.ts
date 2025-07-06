@@ -27,7 +27,11 @@ export function renderListView(programs: any[]) {
 
           const expandedDetails = `
             <div class="mt-2 text-sm text-gray-700 dark:text-gray-300 hidden" id="details-${prog.id}">
-              ${image ? `<img src="${image}" alt="Cover image" class="h-32 w-full object-cover rounded mb-2">` : ''}
+              ${
+                image
+                  ? `<img src="${image}" alt="Image for ${prog.title} in ${topic}" class="h-32 w-full object-cover rounded mb-2">`
+                  : ''
+              }
               <p><strong>Description:</strong> ${prog.description || 'No description available.'}</p>
               <p><strong>Start:</strong> ${new Date(prog.start_time).toLocaleString()}</p>
               <p><strong>End:</strong> ${new Date(prog.end_time).toLocaleString()}</p>
