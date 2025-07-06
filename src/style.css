@@ -53,11 +53,11 @@ h1 {
 }
 
 .event-card-meta {
-  @apply text-sm text-gray-600 dark:text-gray-300;
+  @apply text-sm text-cardiff-grey dark:text-cardiff-grey;
 }
 
 .event-card-desc {
-  @apply text-sm text-gray-700 dark:text-gray-400;
+  @apply text-sm text-cardiff-black dark:text-cardiff-white;
 }
 
 .event-topic-header {
@@ -116,7 +116,11 @@ h1 {
   @apply pt-12 py-6 sticky top-0 z-50 w-full bg-cardiff-black text-white border-t dark:border-gray-700;
 }
 .icon-button {
-  @apply p-2 text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg transition;
+  @apply p-2 text-cardiff-black dark:text-gray-400 hover:bg-cardiff-grey rounded-lg transition;
+}
+
+.icon2-button {
+  @apply p-2 text-cardiff-black border-cardiff-grey dark:text-cardiff-grey hover:bg-cardiff-grey dark:hover:bg-cardiff-black rounded-lg transition;
 }
 
 .btn {

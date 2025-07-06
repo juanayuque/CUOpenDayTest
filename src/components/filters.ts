@@ -83,10 +83,10 @@ export function renderFilters(topics: any[]) {
         <button id="applyFilters" class="px-4 py-2 bg-cardiff-red text-cardiff-white rounded-md hover:bg-cardiff-black text-sm">
           Apply
         </button>
-        <button id="clearFilters" class="icon-button" title="Clear Filters">
+        <button id="clearFilters" class="icon2-button" title="Clear Filters">
           <span class="material-symbols-outlined">cleaning_services</span>
         </button>
-        <button id="toggleView" class="icon-button" title="Toggle View">
+        <button id="toggleView" class="icon2-button" title="Toggle View">
           <span class="material-symbols-outlined">menu_book</span>
         </button>
       </div>
