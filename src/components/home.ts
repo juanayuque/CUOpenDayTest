@@ -43,10 +43,7 @@ export function renderHomePage(data: any, searchTerm: string, setFilteredTopics:
           <span class="material-symbols-outlined">filter_list</span>
           Filters
         </button>
-        <div class="flex items-center gap-2">
-          <!-- Blank space to preserve layout where search was -->
-          <div class="w-40"></div>
-          <button class="icon2-button toggle-view-btn" title="Toggle View">
+          <button class="icon2-button toggle-view-btn dark:bg-gray-900 " title="Toggle View">
             <span class="material-symbols-outlined">grid_view</span>
           </button>
         </div>
@@ -77,7 +74,6 @@ export function renderHomePage(data: any, searchTerm: string, setFilteredTopics:
     </main>
   `
 
-  // ✅ DOM must be updated before accessing new elements
   setTimeout(() => {
     // Mobile: Open/close functionality
     const toggleBtn = document.getElementById('mobile-filter-toggle')
@@ -97,7 +93,6 @@ export function renderHomePage(data: any, searchTerm: string, setFilteredTopics:
       btn.classList.add('text-sm', 'px-2', 'py-1')
     })
 
-    // Optional: shrink dropdowns too
     document.querySelectorAll('#mobileFiltersContainer select, #mobileFiltersContainer input').forEach(el => {
       el.classList.add('py-1', 'text-sm')
     })
