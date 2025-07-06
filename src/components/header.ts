@@ -69,4 +69,21 @@ header.innerHTML = `
     darkIcon.textContent = isNowDark ? 'light_mode' : 'dark_mode'
   })
 
+   const baseFontSize = 16
+  let currentFontSize = parseFloat(localStorage.fontSize) || baseFontSize
+  html.style.fontSize = `${currentFontSize}px`
+
+  const updateFontSize = (delta: number) => {
+    currentFontSize = Math.max(12, Math.min(24, currentFontSize + delta)) // limits between 12–24px
+    html.style.fontSize = `${currentFontSize}px`
+    localStorage.fontSize = currentFontSize
+  }
+
+  const increaseBtn = document.getElementById('increaseFont')!
+  const decreaseBtn = document.getElementById('decreaseFont')!
+
+  increaseBtn.addEventListener('click', () => updateFontSize(6))
+  decreaseBtn.addEventListener('click', () => updateFontSize(-6))
+
+
 }
