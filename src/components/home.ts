@@ -25,23 +25,29 @@ export function renderHomePage(data: any, searchTerm: string, setFilteredTopics:
   setFilteredTopics(filteredTopics)
 
   app.innerHTML = `
-   <div class="min-h-screen bg-cardiff-white font-sans px-2 py-6">
-  <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6">
+   <main class="min-h-screen bg-cardiff-white dark:bg-gray-900 text-cardiff-dark dark:text-white font-sans transition-colors">
+    
+   <div class="title-container">
+
         <a href="https://www.cardiff.ac.uk/" target="_blank" rel="noopener noreferrer">
           <img src="${cuLogo}" alt="Cardiff University Logo" class="h-16 w-auto" />
         </a>
+        
         <h1 class="text-4xl font-bold mb-2">Cardiff University Open Day</h1>
+
         <p class="text-lg text-cardiff-grey dark:text-gray-300 max-w-2xl mx-auto">
           Browse upcoming sessions and explore events to plan your visit.
         </p>
-      </div>
 
-      <div id="filtersContainer">
-        ${renderFilters(data.topics || [])}
-      </div>
+    </div>
 
-      <section id="cardsContainer" class="bg-cardiff-grey rounded-lg shadow p-6 flex flex-col">
-      </section>
+    <div id="filtersContainer">
+    ${renderFilters(data.topics || [])}
+    </div>
+
+    <section id="cardsContainer" class="bg-cardiff-grey rounded-lg shadow p-6 flex flex-col">
+    </section>
+    
     </main>
   `
 

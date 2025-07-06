@@ -67,6 +67,86 @@ h1 {
   color: #888;
 }
 
+.filter-container {
+  @apply mb-6 flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4;
+}
+
+.filter-container {
+  @apply max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8 text-center;
+}
+
+.page-wrapper {
+  @apply min-h-screen bg-cardiff-white font-sans px-2 py-6;
+}
+
+.event-card {
+  @apply bg-white dark:bg-gray-800 rounded-lg shadow-md p-5 flex flex-col gap-2;
+}
+
+.event-card-image {
+  @apply h-40 w-full object-cover rounded mb-2;
+}
+
+.event-card-title {
+  @apply text-lg font-semibold text-cardiff-red;
+}
+
+.event-card-meta {
+  @apply text-sm text-gray-600 dark:text-gray-300;
+}
+
+.event-card-desc {
+  @apply text-sm text-gray-700 dark:text-gray-400;
+}
+
+.event-topic-header {
+  @apply mb-6 text-left px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto;
+}
+
+.event-topic-title {
+  @apply text-2xl font-bold mt-4 text-cardiff-red;
+}
+
+.event-topic-description {
+  @apply text-base text-gray-800 dark:text-gray-300;
+}
+
+.event-grid {
+  @apply grid gap-6 sm:grid-cols-2 lg:grid-cols-3 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto;
+}
+
+.topic-card {
+  @apply bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700 rounded-lg shadow-md p-5 flex flex-col;
+}
+
+.topic-card-image {
+  @apply h-32 w-full object-cover rounded mb-4;
+}
+
+.topic-card-title {
+  @apply text-xl font-bold text-cardiff-red mb-2;
+}
+
+.topic-card-desc {
+  @apply text-sm text-cardiff-dark dark:text-white mb-3;
+}
+
+.btn-primary {
+  @apply px-4 py-2 bg-blue-600 text-white text-sm rounded hover:bg-blue-700;
+}
+
+.btn-secondary {
+  @apply px-4 py-2 bg-gray-200 dark:bg-gray-700 text-sm rounded hover:bg-gray-300 dark:hover:bg-gray-600;
+}
+
+.form-select {
+  @apply block w-full border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-white text-sm rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500;
+}
+
+.form-input {
+  @apply block w-full border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-800 text-sm text-gray-900 dark:text-white shadow-sm focus:ring-blue-500 focus:border-blue-500;
+}
+
 button {
   border-radius: 8px;
   border: 1px solid transparent;
