@@ -37,17 +37,17 @@ export function renderHomePage(data: any, searchTerm: string, setFilteredTopics:
         </p>
       </div>
 
-      <!-- Mobile Filter Navbar -->
-      <div class="filter-navbar flex justify-between items-center px-4 py-3 bg-white dark:bg-gray-900 border-b dark:border-gray-700 sm:hidden">
-        <button id="mobile-filter-toggle" class="btn-outline flex items-center gap-2 text-sm">
-          <span class="material-symbols-outlined">filter_list</span>
-          Filters
-        </button>
-          <button class="icon2-button toggle-view-btn dark:bg-gray-900 " title="Toggle View">
-            <span class="material-symbols-outlined">grid_view</span>
-          </button>
-        </div>
-      </div>
+    <!-- Mobile Filter Navbar -->
+    <div class="filter-navbar w-full flex justify-between items-center px-4 py-3 bg-white dark:bg-gray-900 border-b dark:border-gray-700 sm:hidden">
+      <button id="mobile-filter-toggle" class="btn-outline flex items-center gap-2 text-sm">
+        <span class="material-symbols-outlined">filter_list</span>
+        Filters
+      </button>
+      <button class="icon2-button toggle-view-btn dark:bg-gray-900" title="Toggle View">
+        <span class="material-symbols-outlined">grid_view</span>
+      </button>
+    </div>
+
 
 
       <!-- Mobile Filter Panel (off-canvas) -->
