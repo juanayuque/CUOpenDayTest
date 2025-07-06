@@ -2,6 +2,7 @@
 import './style.css'
 import { renderHomePage } from './components/home'
 import { renderHeader } from './components/header'
+import { renderFooter } from './components/footer'
 import { setFilteredTopics } from './components/interactions'
 
 
@@ -21,3 +22,5 @@ loadOpenDay()
     document.getElementById('app')!.innerHTML = `<p class="text-red-600 p-4">Failed to load data.</p>`
     console.error(err)
   })
+
+renderFooter()

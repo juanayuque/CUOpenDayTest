@@ -25,7 +25,7 @@ export function renderHomePage(data: any, searchTerm: string, setFilteredTopics:
   setFilteredTopics(filteredTopics)
 
   app.innerHTML = `
-   <main class="min-h-screen bg-cardiff-white dark:bg-gray-900 text-cardiff-dark dark:text-white font-sans transition-colors">
+   <main class="min-h-screen bg-cardiff-white dark:bg-gray-900 text-cardiff-dark dark:text-white font-sans transition-colors pb-20">
     
    <div class="title-container">
 
