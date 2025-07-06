@@ -145,3 +145,13 @@ h1 {
     background-color: #f9f9f9;
   }
 }
+
+.filter-navbar {
+  @apply sm:hidden; /* Only show on mobile */
+}
+
+@media (min-width: 640px) {
+  .filter-container {
+    @apply flex-row items-end justify-between;
+  }
+}

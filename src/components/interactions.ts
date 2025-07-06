@@ -17,18 +17,25 @@ export function setFilteredTopics(topics: any[]) {
 export function attachFilterEvents() {
   const applyBtn = document.getElementById('applyFilters')
   const clearBtn = document.getElementById('clearFilters')
-  const toggleViewBtn = document.getElementById('toggleView')
+  const toggleViewBtns = document.querySelectorAll('.toggle-view-btn')
+
+  toggleViewBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      isListView = !isListView
+      expandedId = null
+      renderCardsAndAttachEvents()
+
+      const icon = btn.querySelector('span')
+      if (icon) {
+        icon.textContent = isListView ? 'grid_view' : 'menu_book'
+      }
+    })
+  })
 
   applyBtn?.addEventListener('click', handleApply)
   clearBtn?.addEventListener('click', handleClear)
-  toggleViewBtn?.addEventListener('click', () => {
-    isListView = !isListView
-    expandedId = null
-    renderCardsAndAttachEvents()
-    const icon = toggleViewBtn.querySelector('span')
-    if (icon) icon.textContent = isListView ? 'grid_view' : 'menu_book'
-  })
 }
+
 
 function handleApply() {
   const data = (window as any).openDayData
