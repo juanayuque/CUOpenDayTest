@@ -27,7 +27,9 @@ export function applyFilters(data: any, searchTerm: string, container: HTMLEleme
              (!filterSearch || matchesText)
     })
 
-    const matchesTopic = !topicVal || topic.name === topicVal
+    const matchesTopic =
+  !topicVal || topic.name?.trim().toLowerCase() === topicVal.trim().toLowerCase()
+
     const matchesSearch =
       topic.name?.toLowerCase().includes(searchTerm) ||
       topic.description?.toLowerCase().includes(searchTerm) ||
