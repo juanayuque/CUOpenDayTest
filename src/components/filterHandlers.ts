@@ -1,9 +1,9 @@
-export function applyFilters(data: any, searchTerm: string): any[] {
-  const topicVal = (document.getElementById('topicFilter') as HTMLSelectElement).value
-  const locationVal = (document.getElementById('locationFilter') as HTMLSelectElement).value
-  const accessibilityVal = (document.getElementById('accessibilityFilter') as HTMLSelectElement).value
-  const timeVal = (document.getElementById('timeFilter') as HTMLInputElement).value
-  const filterSearch = (document.getElementById('filterSearchInput') as HTMLInputElement).value.toLowerCase()
+export function applyFilters(data: any, searchTerm: string, container: HTMLElement): any[] {
+  const topicVal = (container.querySelector('#topicFilter') as HTMLSelectElement)?.value || ''
+  const locationVal = (container.querySelector('#locationFilter') as HTMLSelectElement)?.value || ''
+  const accessibilityVal = (container.querySelector('#accessibilityFilter') as HTMLSelectElement)?.value || ''
+  const timeVal = (container.querySelector('#timeFilter') as HTMLInputElement)?.value || ''
+  const filterSearch = (container.querySelector('#filterSearchInput') as HTMLInputElement)?.value.toLowerCase() || ''
 
   const filtered = (data.topics || []).map((topic: any) => {
     const matchingPrograms = (topic.programs || []).filter((prog: any) => {
@@ -44,12 +44,21 @@ export function applyFilters(data: any, searchTerm: string): any[] {
   return filtered
 }
 
-export function clearFilters(data: any): any[] {
-  (document.getElementById('topicFilter') as HTMLSelectElement).value = '';
-  (document.getElementById('locationFilter') as HTMLSelectElement).value = '';
-  (document.getElementById('accessibilityFilter') as HTMLSelectElement).value = '';
-  (document.getElementById('timeFilter') as HTMLInputElement).value = '';
-  (document.getElementById('filterSearchInput') as HTMLInputElement).value = '';
+
+export function clearFilters(data: any, container: HTMLElement): any[] {
+  const topicEl = container.querySelector('#topicFilter') as HTMLSelectElement | null
+  const locationEl = container.querySelector('#locationFilter') as HTMLSelectElement | null
+  const accessEl = container.querySelector('#accessibilityFilter') as HTMLSelectElement | null
+  const timeEl = container.querySelector('#timeFilter') as HTMLInputElement | null
+  const searchEl = container.querySelector('#filterSearchInput') as HTMLInputElement | null
+
+  if (topicEl) topicEl.value = ''
+  if (locationEl) locationEl.value = ''
+  if (accessEl) accessEl.value = ''
+  if (timeEl) timeEl.value = ''
+  if (searchEl) searchEl.value = ''
+
   return data.topics.filter((t: any) => (t.programs || []).length > 0)
 }
+
 

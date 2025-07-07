@@ -15,8 +15,8 @@ export function setFilteredTopics(topics: any[]) {
 }
 
 export function attachFilterEvents() {
-  const applyBtn = document.getElementById('applyFilters')
-  const clearBtn = document.getElementById('clearFilters')
+  const applyBtns = document.querySelectorAll('#applyFilters')
+  const clearBtns = document.querySelectorAll('#clearFilters')
   const toggleViewBtns = document.querySelectorAll('.toggle-view-btn')
 
   toggleViewBtns.forEach(btn => {
@@ -32,23 +32,48 @@ export function attachFilterEvents() {
     })
   })
 
-  applyBtn?.addEventListener('click', handleApply)
-  clearBtn?.addEventListener('click', handleClear)
+  applyBtns.forEach(btn => {
+    btn.addEventListener('click', handleApply)
+  })
+
+  clearBtns.forEach(btn => {
+    btn.addEventListener('click', handleClear)
+  })
 }
 
 
-function handleApply() {
+
+function handleApply(event: Event) {
+  const button = event.currentTarget as HTMLElement
+  const container = button.closest('#mobileFiltersContainer, #filtersContainer') as HTMLElement | null
+  if (!container) return
+
   const data = (window as any).openDayData
-  filteredTopics = applyFilters(data, searchTerm.toLowerCase())
+  filteredTopics = applyFilters(data, searchTerm.toLowerCase(), container)
   expandedId = null
   renderCardsAndAttachEvents()
+
+  // Hide mobile panel after applying
+  const mobilePanel = document.getElementById('mobile-filters-panel')
+  mobilePanel?.classList.add('hidden')
 }
 
-function handleClear() {
+
+function handleClear(event: Event) {
+  const button = event.currentTarget as HTMLElement
+  const container = button.closest('#mobileFiltersContainer, #filtersContainer') as HTMLElement | null
+  if (!container) return
+
   const data = (window as any).openDayData
-  filteredTopics = clearFilters(data)
+  filteredTopics = clearFilters(data, container)
   expandedId = null
   renderCardsAndAttachEvents()
+
+  // Close only for mobile panel
+  if (container.id === 'mobileFiltersContainer') {
+    const mobilePanel = document.getElementById('mobile-filters-panel')
+    mobilePanel?.classList.add('hidden')
+  }
 }
 
 export function renderCardsAndAttachEvents() {

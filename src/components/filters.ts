@@ -80,15 +80,18 @@ export function renderFilters(topics: any[]) {
 
       <!-- Buttons -->
       <div class="col-span-2 sm:col-span-3 md:col-span-2 flex items-end gap-2">
-        <button id="applyFilters" class="px-3 py-1 bg-cardiff-red text-white rounded-md hover:bg-cardiff-black text-sm">
-          Apply
-        </button>
-        <button id="clearFilters" class="icon2-button" title="Clear Filters">
-          <span class="material-symbols-outlined">cleaning_services</span>
-        </button>
-        <button class="icon2-button toggle-view-btn" title="Toggle View">
-          <span class="material-symbols-outlined">menu_book</span>
-        </button>
+        <button id="applyFilters" type="button" class="px-3 py-1 bg-cardiff-red text-white rounded-md hover:bg-cardiff-black text-sm">
+  Apply
+</button>
+
+<button id="clearFilters" type="button" class="icon2-button" title="Clear Filters">
+  <span class="material-symbols-outlined">cleaning_services</span>
+</button>
+
+<button type="button" class="icon2-button toggle-view-btn" title="Toggle View">
+  <span class="material-symbols-outlined">menu_book</span>
+</button>
+
       </div>
     </div>
   </div>
