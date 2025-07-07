@@ -172,7 +172,7 @@
 
 
       <!-- Mobile Filter Panel (off-canvas) -->
-      <div id="mobile-filters-panel" class="hidden fixed inset-0 z-40 bg-black bg-opacity-30 sm:hidden">
+      <div id="mobile-filters-panel" class="hidden fixed inset-0 z-[9999] bg-black bg-opacity-30 sm:hidden">
         <div class="absolute bottom-0 w-full bg-white dark:bg-gray-800 rounded-t-lg p-4 shadow-lg max-h-[90%] overflow-y-auto">
           <div class="flex justify-between items-center mb-2">
             <h2 class="text-lg font-semibold">Filters</h2>
