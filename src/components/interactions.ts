@@ -59,7 +59,7 @@ export function renderCardsAndAttachEvents() {
     : filteredTopics
 
   if (isListView && expandedId == null) {
-    container.className = "body-container"
+    container.className = "max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8"
 
 
     const allPrograms = visibleTopics.flatMap(topic =>
@@ -82,7 +82,7 @@ export function renderCardsAndAttachEvents() {
       })
     })
   } else {
-    container.className = container.className = "body-container"
+    container.className = "body-container"
 
     container.innerHTML = renderCards(visibleTopics, expandedId)
 
